@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <style>
+        tr { cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Lista de Alunos</h2>
+    <p>Bem-vindo, <span class="user-name">Visitante</span></p>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Curso</th>
+            <th>Matrícula</th>
+            <th>Evasão (%)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="aluno : ${alunos}"
+            th:attr="data-curso=${aluno.nomeCurso}"
+            onclick="window.location.href='/alunos_curso?curso=' + this.getAttribute('data-curso')">
+            <td th:text="${aluno.nome}">Nome</td>
+            <td th:text="${aluno.nomeCurso}">Curso</td>
+            <td th:text="${aluno.matricula}">Matrícula</td>
+            <td th:text="${#numbers.formatDecimal(aluno.evasao, 1, 'POINT')} + '%'">Evasão</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
