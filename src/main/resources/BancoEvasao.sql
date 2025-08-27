@@ -7,17 +7,27 @@
 
 -- Started on 2025-08-17 14:09:19
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
+SET
+statement_timeout = 0;
+SET
+lock_timeout = 0;
+SET
+idle_in_transaction_session_timeout = 0;
+SET
+transaction_timeout = 0;
+SET
+client_encoding = 'UTF8';
+SET
+standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
+SET
+check_function_bodies = false;
+SET
+xmloption = content;
+SET
+client_min_messages = warning;
+SET
+row_security = off;
 
 --
 -- TOC entry 4 (class 2615 OID 2200)
@@ -27,7 +37,8 @@ SET row_security = off;
 CREATE SCHEMA public;
 
 
-ALTER SCHEMA public OWNER TO pg_database_owner;
+ALTER
+SCHEMA public OWNER TO pg_database_owner;
 
 --
 -- TOC entry 4833 (class 0 OID 0)
@@ -35,23 +46,27 @@ ALTER SCHEMA public OWNER TO pg_database_owner;
 -- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: pg_database_owner
 --
 
-COMMENT ON SCHEMA public IS 'standard public schema';
+COMMENT
+ON SCHEMA public IS 'standard public schema';
 
 
-SET default_tablespace = '';
+SET
+default_tablespace = '';
 
-SET default_table_access_method = heap;
+SET
+default_table_access_method = heap;
 
 --
 -- TOC entry 222 (class 1259 OID 107166)
 -- Name: aluno; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.aluno (
-    matricula bigint NOT NULL,
-    nome character varying(255) NOT NULL,
-    email character varying(255) NOT NULL,
-    foto character varying(255)
+CREATE TABLE public.aluno
+(
+    matricula bigint                 NOT NULL,
+    nome      character varying(255) NOT NULL,
+    email     character varying(255) NOT NULL,
+    foto      character varying(255)
 );
 
 
@@ -67,8 +82,7 @@ CREATE SEQUENCE public.aluno_matricula_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+    NO MAXVALUE CACHE 1;
 
 
 ALTER SEQUENCE public.aluno_matricula_seq OWNER TO postgres;
@@ -87,12 +101,13 @@ ALTER SEQUENCE public.aluno_matricula_seq OWNED BY public.aluno.matricula;
 -- Name: coordenador; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.coordenador (
-    matricula bigint NOT NULL,
-    nome character varying(255) NOT NULL,
-    email character varying(255) NOT NULL,
-    senha character varying(255) NOT NULL,
-    foto character varying(255)
+CREATE TABLE public.coordenador
+(
+    matricula bigint                 NOT NULL,
+    nome      character varying(255) NOT NULL,
+    email     character varying(255) NOT NULL,
+    senha     character varying(255) NOT NULL,
+    foto      character varying(255)
 );
 
 
@@ -108,8 +123,7 @@ CREATE SEQUENCE public.coordenador_matricula_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+    NO MAXVALUE CACHE 1;
 
 
 ALTER SEQUENCE public.coordenador_matricula_seq OWNER TO postgres;
@@ -128,11 +142,12 @@ ALTER SEQUENCE public.coordenador_matricula_seq OWNED BY public.coordenador.matr
 -- Name: curso; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.curso (
-    codigo bigint NOT NULL,
-    nome character varying(255) NOT NULL,
-    evasao_media double precision,
-    coordenador_id bigint NOT NULL
+CREATE TABLE public.curso
+(
+    codigo         bigint                 NOT NULL,
+    nome           character varying(255) NOT NULL,
+    evasao_media   double precision,
+    coordenador_id bigint                 NOT NULL
 );
 
 
@@ -148,8 +163,7 @@ CREATE SEQUENCE public.curso_codigo_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+    NO MAXVALUE CACHE 1;
 
 
 ALTER SEQUENCE public.curso_codigo_seq OWNER TO postgres;
@@ -168,10 +182,11 @@ ALTER SEQUENCE public.curso_codigo_seq OWNED BY public.curso.codigo;
 -- Name: matricula; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.matricula (
-    codigo bigint NOT NULL,
-    aluno_id bigint NOT NULL,
-    curso_id bigint NOT NULL,
+CREATE TABLE public.matricula
+(
+    codigo           bigint NOT NULL,
+    aluno_id         bigint NOT NULL,
+    curso_id         bigint NOT NULL,
     historico_evasao character varying(255)
 );
 
@@ -188,8 +203,7 @@ CREATE SEQUENCE public.matricula_codigo_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+    NO MAXVALUE CACHE 1;
 
 
 ALTER SEQUENCE public.matricula_codigo_seq OWNER TO postgres;
@@ -277,7 +291,8 @@ COPY public.curso (codigo, nome, evasao_media, coordenador_id) FROM stdin;
 --
 
 COPY public.matricula (codigo, aluno_id, curso_id, historico_evasao) FROM stdin;
-\.
+\
+.
 
 
 --

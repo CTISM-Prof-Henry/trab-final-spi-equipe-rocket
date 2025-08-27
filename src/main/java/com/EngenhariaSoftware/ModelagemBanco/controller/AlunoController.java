@@ -11,16 +11,16 @@ import java.util.List;
 
 @Controller
 public class AlunoController {
-
+    
     @Autowired
     private AlunoService alunoService;
-
+    
     @GetMapping("/alunos")
     public String listarAlunos(Model model) {
-
+        
         List<AlunoDTO> alunos = alunoService.listarAlunosDTO();
         model.addAttribute("alunos", alunos);
-
+        
         return "alunos"; // nome do template Thymeleaf alunos.html
     }
 }
