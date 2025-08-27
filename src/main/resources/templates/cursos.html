@@ -36,23 +36,35 @@
 <main class="principal">
     <div class="container mt-4">
         <h3 class="mb-3">Lista de Cursos</h3>
+
+        <!-- Campo de pesquisa -->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Pesquisar curso...">
+        </div>
+
         <table class="table table-bordered table-hover bg-white">
             <thead class="thead-light">
             <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>Probabilidade de Evasão Média</th>
+                <th onclick="setFiltro('codigo', !ordemCrescente)">Código</th>
+                <th onclick="setFiltro('nome', !ordemCrescente)">Nome</th>
+                <th onclick="setFiltro('evasaoMedia', !ordemCrescente)">
+                    Evasão Média <span id="texto-filtro"></span>
+                </th>
             </tr>
             </thead>
-            <tbody>
-            <tr th:each="curso : ${cursos}">
-                <td th:text="${curso.codigo}"></td>
-                <td th:text="${curso.nome}"></td>
-                <td th:text="${curso.evasaoMedia + '%'}"></td>
-            </tr>
+            <tbody id="tabela-cursos">
+            <!-- Tabela será preenchida pelo JavaScript -->
             </tbody>
         </table>
     </div>
 </main>
+
+<!-- Injeção da lista de cursos no JavaScript -->
+<script th:inline="javascript">
+    let cursos = /*[[${cursos}]]*/ [];
+</script>
+
+<!-- Inclusão do JavaScript externo -->
+<script th:src="@{/javascript/paginaCursos.js}"></script>
 </body>
 </html>

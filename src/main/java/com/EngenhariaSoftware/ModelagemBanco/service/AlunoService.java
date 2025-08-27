@@ -22,7 +22,7 @@ public class AlunoService {
             String nomeCurso = "";
             Double evasao = 0.0;
 
-            if (!aluno.getMatriculas().isEmpty()) {
+            if (aluno.getMatriculas() != null && !aluno.getMatriculas().isEmpty()) {
                 var matricula = aluno.getMatriculas().get(0);
                 if (matricula.getCurso() != null) {
                     nomeCurso = matricula.getCurso().getNome();
@@ -39,5 +39,6 @@ public class AlunoService {
             );
         }).collect(Collectors.toList());
     }
+
 
 }
