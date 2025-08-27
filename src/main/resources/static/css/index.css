@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../images/biblioteca.jpg');
+    font-family: Arial, sans-serif;
+}
