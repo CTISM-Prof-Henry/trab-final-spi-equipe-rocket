@@ -12,7 +12,7 @@ import java.util.List;
 
 @Controller
 public class AlunoController {
-
+    
     @Autowired
     private AlunoService alunoService;
 

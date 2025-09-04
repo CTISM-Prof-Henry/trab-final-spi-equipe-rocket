@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>SCI - Alunos</title>
-
-    <!-- Estilo principal da aplicação -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
-
-    <!-- Bootstrap (mantido como no original) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
 </head>
 <body>
-
-<!-- Cabeçalho com navegação -->
 <header class="menu">
     <nav class="navbar navbar-expand-sm custom-navbar d-flex align-items-center">
         <div class="d-flex align-items-center">
@@ -46,7 +40,11 @@
 
         <!-- Campo de pesquisa -->
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Pesquisar aluno...">
+            <input type="text" class="form-control"
+                   placeholder="Digite o nome ou matrícula do aluno aqui para pesquisar">
+            <div class="input-group-append">
+                <button class="btn pesquisa" type="button"><img th:src="@{/images/pesquisa-lupa.png}" alt="lupa de pesquisa"></button>
+            </div>
         </div>
 
         <!-- Tabela de alunos -->
@@ -75,6 +73,5 @@
 
 <!-- Inclusão do JavaScript externo -->
 <script th:src="@{/javascript/paginaAlunos.js}"></script>
-
 </body>
 </html>

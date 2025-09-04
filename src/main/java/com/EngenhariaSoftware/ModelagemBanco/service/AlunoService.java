@@ -12,19 +12,20 @@ import java.util.stream.Collectors;
 
 @Service
 public class AlunoService {
-
+    
     @Autowired
     private AlunoRepository alunoRepository;
-
+    
     public List<AlunoDTO> listarAlunosDTO() {
         List<Aluno> alunos = alunoRepository.findAll();
-
+        
         return alunos.stream().map(aluno -> {
             String nomeCurso = "";
             Double evasao = 0.0;
             Map<String, Double> historicoEvasao = null;
 
             if (aluno.getMatriculas() != null && !aluno.getMatriculas().isEmpty()) {
+
                 var matricula = aluno.getMatriculas().get(0);
                 if (matricula.getCurso() != null) {
                     nomeCurso = matricula.getCurso().getNome();
@@ -33,7 +34,7 @@ public class AlunoService {
                 }
                 historicoEvasao = matricula.getHistoricoEvasaoMap(); // pega o histórico
             }
-
+            
             return new AlunoDTO(
                     aluno.getNome(),
                     aluno.getMatricula(),
@@ -43,7 +44,6 @@ public class AlunoService {
             );
         }).collect(Collectors.toList());
     }
-
 
     public List<AlunoDTO> listarAlunosPorCursoDTO(Long codigoCurso) {
         List<Aluno> alunos = alunoRepository.findByMatriculas_Curso_Codigo(codigoCurso);

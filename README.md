@@ -1,7 +1,9 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/agg6sSBC)
-# Título do repositório
 
-Descrição curta do repositório.
+# Sistema de Coordenação Institucional
+
+Este sistema foi projetado para permitir que coordenadores de cursos visualizem o(s) cursos
+administrados por eles, além de receber um relatório de probabilidade de evasão do alunos.
 
 ## Sumário
 
@@ -13,21 +15,18 @@ Descrição curta do repositório.
 
 ## Pré-requisitos
 
-Descreva aqui brevemente os pré-requisitos necessários para executar o código-fonte. Descreva também
-a configuração mínima da máquina em que o código foi desenvolvido, e se alguma configuração em particular é essencial
-para sua execução (por exemplo, placa de vídeo dedicada):
+Para utilizar esse sistema web, é recomendado cumprir os seguintes requisitos:
 
-| Configuração        | Valor                    |
-|---------------------|--------------------------|
-| Sistema operacional | Windows 10 Pro (64 bits) |
-| Processador         | Intel core i7 9700       |
-| Memória RAM         | 16GB                     |
-| Necessita rede?     | Sim                      |
-
+| Configuração      | Valor                                                                             |
+|-------------------|-----------------------------------------------------------------------------------|
+| Navegador         | Versões mais recentes do Google Chrome, Mozilla Firefox, Microsoft Edge ou Safari |
+| Javascript        | Normalmente suportado pelos navegadores                                           |
+| Resolução de tela | no minímo 1024x768                                                                |
+| Rede              | Necessário acesso a internet                                                      |
 
 ## Instalação
 
-Descreva aqui as instruções para instalação das ferramentas para execução do código-fonte: 
+Descreva aqui as instruções para instalação das ferramentas para execução do código-fonte:
 
 ```bash
 sudo apt-get install nano

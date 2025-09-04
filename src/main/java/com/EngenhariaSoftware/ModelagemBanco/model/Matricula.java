@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Entity
 public class Matricula {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
@@ -21,7 +21,7 @@ public class Matricula {
     @ManyToOne
     @JoinColumn(name = "aluno_id")
     private Aluno aluno;
-
+    
     @ManyToOne
     @JoinColumn(name = "curso_id")
     private Curso curso;
@@ -38,11 +38,11 @@ public class Matricula {
         this.aluno = aluno;
         this.curso = curso;
     }
-
+    
     public Long getCodigo() {
         return codigo;
     }
-
+    
     public void setCodigo(Long codigo) {
         this.codigo = codigo;
     }
@@ -51,7 +51,7 @@ public class Matricula {
     public String getHistoricoEvasao() {
         return historicoEvasao;
     }
-
+    
     public void setHistoricoEvasao(String historicoEvasao) {
         this.historicoEvasao = historicoEvasao;
         // Atualiza o Map sempre que a String JSON mudar
@@ -72,15 +72,15 @@ public class Matricula {
         // Atualiza a string JSON sempre que o Map mudar
         this.historicoEvasao = toJson(historicoEvasaoMap);
     }
-
+    
     public Aluno getAluno() {
         return aluno;
     }
-
+    
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
     }
-
+    
     public Curso getCurso() {
         return curso;
     }

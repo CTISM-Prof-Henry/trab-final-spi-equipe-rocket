@@ -3,7 +3,7 @@ package com.EngenhariaSoftware.ModelagemBanco.dto;
 import java.util.Map;
 
 public class AlunoDTO {
-
+    
     private String nome;
     private Long matricula;
     private Double evasao;
@@ -19,7 +19,7 @@ public class AlunoDTO {
         this.nomeCurso = nomeCurso;
         this.historicoEvasao = historicoEvasao;
     }
-
+    
     // Getters e Setters
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
