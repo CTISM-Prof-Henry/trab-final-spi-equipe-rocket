@@ -1,6 +1,6 @@
-package com.EngenhariaSoftware.ModelagemBanco.repository;
+package ES.EquipeRocket.SistemaCI.repository;
 
-import com.EngenhariaSoftware.ModelagemBanco.model.Curso;
+import ES.EquipeRocket.SistemaCI.model.Curso;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
