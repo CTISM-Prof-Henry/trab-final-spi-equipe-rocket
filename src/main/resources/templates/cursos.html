@@ -38,47 +38,39 @@
         <h3 class="m-3 text-white">Lista de Cursos</h3>
     </div>
     <div class="container mt-4">
+        <h3 class="mb-3">Lista de Cursos</h3>
+
+        <!-- Campo de pesquisa -->
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Digite o nome ou código do curso aqui para pesquisar">
             <div class="input-group-append">
-                <button class="btn pesquisa" type="button"><img th:src="@{/images/pesquisa-lupa.png}"
-                                                                alt="lupa de pesquisa"></button>
+                <button class="btn pesquisa" type="button"><img th:src="@{/images/pesquisa-lupa.png}" alt="lupa de pesquisa"></button>
             </div>
         </div>
-        <div class="d-flex justify-content-end mb-2">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownFiltro"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Filtro <span id="texto-filtro">Evasão ↓</span>
-                </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownFiltro">
-                    <h6 class="dropdown-header">Ordenar por:</h6>
-                    <button class="dropdown-item" onclick="setFiltro('codigo', true)">Código ↑</button>
-                    <button class="dropdown-item" onclick="setFiltro('codigo', false)">Código ↓</button>
-                    <button class="dropdown-item" onclick="setFiltro('nome', true)">Nome ↑</button>
-                    <button class="dropdown-item" onclick="setFiltro('nome', false)">Nome ↓</button>
-                    <button class="dropdown-item" onclick="setFiltro('evasao', true)">Evasão ↑</button>
-                    <button class="dropdown-item" onclick="setFiltro('evasao', false)">Evasão ↓</button>
-                </div>
-            </div>
-        </div>
+
         <table class="table table-bordered table-hover bg-white">
             <thead class="thead-light">
             <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>Probabilidade de Evasão Média</th>
+                <th onclick="setFiltro('codigo', !ordemCrescente)">Código</th>
+                <th onclick="setFiltro('nome', !ordemCrescente)">Nome</th>
+                <th onclick="setFiltro('evasaoMedia', !ordemCrescente)">
+                    Evasão Média <span id="texto-filtro"></span>
+                </th>
             </tr>
             </thead>
-            <tbody>
-            <tr th:each="curso : ${cursos}">
-                <td th:text="${curso.codigo}"></td>
-                <td th:text="${curso.nome}"></td>
-                <td th:text="${curso.evasaoMedia + '%'}"></td>
-            </tr>
+            <tbody id="tabela-cursos">
+            <!-- Tabela será preenchida pelo JavaScript -->
             </tbody>
         </table>
     </div>
 </main>
+
+<!-- Injeção da lista de cursos no JavaScript -->
+<script th:inline="javascript">
+    let cursos = /*[[${cursos}]]*/ [];
+</script>
+
+<!-- Inclusão do JavaScript externo -->
+<script th:src="@{/javascript/paginaCursos.js}"></script>
 </body>
 </html>
