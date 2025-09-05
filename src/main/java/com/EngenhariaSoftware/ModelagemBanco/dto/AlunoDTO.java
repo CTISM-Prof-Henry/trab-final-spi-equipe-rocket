@@ -1,4 +1,4 @@
-package ES.EquipeRocket.SistemaCI.dto;
+package com.EngenhariaSoftware.ModelagemBanco.dto;
 
 public class AlunoDTO {
     

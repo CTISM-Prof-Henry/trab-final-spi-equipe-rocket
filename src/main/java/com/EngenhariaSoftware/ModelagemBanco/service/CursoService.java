@@ -1,7 +1,7 @@
-package ES.EquipeRocket.SistemaCI.service;
+package com.EngenhariaSoftware.ModelagemBanco.service;
 
-import ES.EquipeRocket.SistemaCI.model.Curso;
-import ES.EquipeRocket.SistemaCI.repository.CursoRepository;
+import com.EngenhariaSoftware.ModelagemBanco.model.Curso;
+import com.EngenhariaSoftware.ModelagemBanco.repository.CursoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

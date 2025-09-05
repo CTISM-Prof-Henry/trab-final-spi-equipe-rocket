@@ -1,4 +1,4 @@
-package ES.EquipeRocket.SistemaCI.controller;
+package com.EngenhariaSoftware.ModelagemBanco.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

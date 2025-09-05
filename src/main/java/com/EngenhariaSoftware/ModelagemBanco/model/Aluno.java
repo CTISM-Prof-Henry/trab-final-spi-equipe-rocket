@@ -1,4 +1,4 @@
-package ES.EquipeRocket.SistemaCI.model;
+package com.EngenhariaSoftware.ModelagemBanco.model;
 
 import jakarta.persistence.*;
 
