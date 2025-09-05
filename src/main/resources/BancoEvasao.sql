@@ -5,7 +5,7 @@
 -- Dumped from database version 17.0
 -- Dumped by pg_dump version 17.0
 
--- Started on 2025-08-17 14:09:19
+-- Started on 2025-08-28 10:44:40
 
 SET
 statement_timeout = 0;
@@ -291,8 +291,8 @@ COPY public.curso (codigo, nome, evasao_media, coordenador_id) FROM stdin;
 --
 
 COPY public.matricula (codigo, aluno_id, curso_id, historico_evasao) FROM stdin;
-\
-.
+1	1	1	{"2020": 0.60, "2021": 0.35, "2022": 0.64, "2023": 0.26, "2024": 0.49}
+\.
 
 
 --
@@ -328,7 +328,7 @@ SELECT pg_catalog.setval('public.curso_codigo_seq', 2, true);
 -- Name: matricula_codigo_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.matricula_codigo_seq', 1, false);
+SELECT pg_catalog.setval('public.matricula_codigo_seq', 1, true);
 
 
 --
@@ -412,7 +412,7 @@ ALTER TABLE ONLY public.matricula
     ADD CONSTRAINT matricula_curso_id_fkey FOREIGN KEY (curso_id) REFERENCES public.curso(codigo);
 
 
--- Completed on 2025-08-17 14:09:20
+-- Completed on 2025-08-28 10:44:41
 
 --
 -- PostgreSQL database dump complete
