@@ -1,4 +1,4 @@
-package com.EngenhariaSoftware.ModelagemBanco;
+package ES.EquipeRocket.SistemaCI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

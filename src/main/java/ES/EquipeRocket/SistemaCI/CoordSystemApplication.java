@@ -1,4 +1,4 @@
-package com.EngenhariaSoftware.ModelagemBanco;
+package ES.EquipeRocket.SistemaCI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

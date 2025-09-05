@@ -1,4 +1,4 @@
-package com.EngenhariaSoftware.ModelagemBanco.dto;
+package ES.EquipeRocket.SistemaCI.dto;
 
 import java.util.Map;
 

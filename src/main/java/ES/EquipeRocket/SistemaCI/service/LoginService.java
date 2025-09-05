@@ -1,7 +1,7 @@
-package com.EngenhariaSoftware.ModelagemBanco.service;
+package ES.EquipeRocket.SistemaCI.service;
 
-import com.EngenhariaSoftware.ModelagemBanco.model.Coordenador;
-import com.EngenhariaSoftware.ModelagemBanco.repository.CoordenadorRepository;
+import ES.EquipeRocket.SistemaCI.model.Coordenador;
+import ES.EquipeRocket.SistemaCI.repository.CoordenadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,85 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCI - Detalhes do Aluno</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-</head>
-<body>
-
-<!-- Cabeçalho -->
-<header class="menu">
-    <nav class="navbar navbar-expand-sm custom-navbar d-flex align-items-center">
-        <div class="d-flex align-items-center">
-            <a class="navbar-brand" th:href="@{/home}">
-                <img th:src="@{/images/logo.png}" class="logo-img img-fluid" alt="Logo">
-            </a>
-            <div class="ml-3">
-                <span class="navbar-text bem-vindo d-block">Bem-Vindo ao Sistema de Coordenação Institucional!</span>
-                <ul class="navbar-nav flex-row">
-                    <li class="nav-item mx-2"><a class="nav-link" th:href="@{/home}">Início</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link" th:href="@{/cursos}">Cursos</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link active" th:href="@{/alunos}">Alunos</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="ml-auto d-flex align-items-center user-area">
-            <img th:src="@{/images/perfil.jpg}" alt="Usuário" class="rounded-circle user-img">
-            <div class="ml-2 text-right">
-                <span class="d-block user-name">Vinicius</span>
-                <a th:href="@{/}" class="small text-primary">Sair</a>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<!-- Conteúdo principal -->
-<main class="principal">
-    <div class="container mt-4">
-
-        <!-- Card com informações do aluno -->
-        <div class="card mb-4">
-            <div class="card-body">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SCI - Detalhes do Aluno</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+    <body>
+        <header class="menu">
+            <nav class="navbar navbar-expand-sm custom-navbar d-flex align-items-center">
                 <div class="d-flex align-items-center">
-                    <img th:src="@{/images/aluno.jpg}" alt="Foto do Aluno" class="rounded-circle me-3" style="width: 100px; height: 100px;">
-                    <div>
-                        <p><strong>Nome:</strong> <span id="nome-aluno" th:text="${aluno.nome}"></span></p>
-                        <p><strong>Matrícula:</strong> <span id="matricula-aluno" th:text="${aluno.matricula}"></span></p>
-                        <p><strong>Curso:</strong> <span id="curso-aluno" th:text="${aluno.nomeCurso}"></span></p>
+                    <a class="navbar-brand" th:href="@{/home}">
+                        <img th:src="@{/images/logo.png}" class="logo-img img-fluid" alt="Logo">
+                    </a>
+                    <div class="ml-3">
+                        <span class="navbar-text bem-vindo d-block">Bem-Vindo ao Sistema de Coordenação Institucional!</span>
+                        <ul class="navbar-nav flex-row">
+                            <li class="nav-item mx-2"><a class="nav-link" th:href="@{/home}">Início</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link" th:href="@{/cursos}">Cursos</a></li>
+                            <li class="nav-item mx-2"><a class="nav-link active" th:href="@{/alunos}">Alunos</a></li>
+                        </ul>
                     </div>
                 </div>
-                <p class="mt-3">
-                    <strong>Probabilidade de evasão:</strong>
-                    <span id="evasao-aluno" class="text-danger" th:text="${#numbers.formatDecimal(aluno.evasao * 100, 1, 0)} + '%'"></span>
-                </p>
-                <button class="btn btn-primary">Ver Relatório</button>
+
+                <div class="ml-auto d-flex align-items-center user-area">
+                    <img th:src="@{/images/perfil.jpg}" alt="Usuário" class="rounded-circle user-img">
+                    <div class="ml-2 text-right">
+                        <span class="d-block user-name">Vinicius</span>
+                        <a th:href="@{/logout}" class="small text-primary">Sair</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <main class="principal">
+            <div class="container mt-4">
+                <!-- Card com informações do aluno -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <img th:src="@{/images/aluno.jpg}" alt="Foto do Aluno" class="rounded-circle me-3" style="width: 100px; height: 100px;">
+                            <div>
+                                <p><strong>Nome:</strong> <span id="nome-aluno" th:text="${aluno.nome}"></span></p>
+                                <p><strong>Matrícula:</strong> <span id="matricula-aluno" th:text="${aluno.matricula}"></span></p>
+                                <p><strong>Curso:</strong> <span id="curso-aluno" th:text="${aluno.nomeCurso}"></span></p>
+                            </div>
+                        </div>
+                        <p class="mt-3">
+                            <strong>Probabilidade de evasão:</strong>
+                            <span id="evasao-aluno" class="text-danger" th:text="${#numbers.formatDecimal(aluno.evasao * 100, 1, 0)} + '%'"></span>
+                        </p>
+                        <button class="btn btn-primary">Ver Relatório</button>
+                    </div>
+                </div>
+
+                <!-- Gráfico de evasão -->
+                <div class="container mt-4 p-4 bg-white rounded shadow">
+                    <canvas id="graficoEvasaoBarra" width="400" height="200"></canvas>
+                </div>
             </div>
-        </div>
+        </main>
 
-        <!-- Gráfico de evasão -->
-        <div class="container mt-4 p-4 bg-white rounded shadow">
-            <canvas id="graficoEvasaoBarra" width="400" height="200"></canvas>
-        </div>
+        <!-- Injetando objeto aluno no JS -->
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+            const aluno = /*[[${aluno}]]*/ {};
+            /*]]>*/
+        </script>
 
-    </div>
-</main>
-
-<!-- Injetando objeto aluno no JS -->
-<script th:inline="javascript">
-    /*<![CDATA[*/
-    const aluno = /*[[${aluno}]]*/ {};
-    /*]]>*/
-</script>
-
-<!-- JS separado -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script th:src="@{/javascript/paginaAluno.js}"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
-</body>
+        <!-- JS separado -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script th:src="@{/javascript/paginaAluno.js}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
 </html>

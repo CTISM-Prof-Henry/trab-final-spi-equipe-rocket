@@ -1,4 +1,4 @@
-package com.EngenhariaSoftware.ModelagemBanco.model;
+package ES.EquipeRocket.SistemaCI.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

@@ -1,8 +1,8 @@
-package com.EngenhariaSoftware.ModelagemBanco.service;
+package ES.EquipeRocket.SistemaCI.service;
 
-import com.EngenhariaSoftware.ModelagemBanco.dto.AlunoDTO;
-import com.EngenhariaSoftware.ModelagemBanco.model.Aluno;
-import com.EngenhariaSoftware.ModelagemBanco.repository.AlunoRepository;
+import ES.EquipeRocket.SistemaCI.dto.AlunoDTO;
+import ES.EquipeRocket.SistemaCI.model.Aluno;
+import ES.EquipeRocket.SistemaCI.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
