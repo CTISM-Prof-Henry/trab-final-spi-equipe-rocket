@@ -6,11 +6,24 @@ services:
     environment:
       POSTGRES_USER: postgres #Usuario
       POSTGRES_PASSWORD: 1234 #Senha
-      POSTGRES_DB: se_database #E nome do banco
+      POSTGRES_DB: sci_database #E nome do banco
     ports:
       - "5433:5432" #Porta onde roda o banco 5433:5432 = local:container
     volumes:
-      - se-system_data:/var/lib/postgresql/data #Volume para guardar dados do banco
+      - sci-db_data:/var/lib/postgresql/data #Volume para guardar dados do banco
+
+  app:
+    build:
+      context: .
+    container_name: coordsystem_app
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sci_database
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1234
+    ports:
+      - "8080:8080"
 
 volumes:
-  se-system_data:
+  sci-db_data:

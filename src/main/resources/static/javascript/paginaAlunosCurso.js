@@ -53,7 +53,7 @@ function renderTabela(lista) {
             <td>${aluno.matricula}</td>
             <td>
                 <div class="progress">
-                    <div class="progress-bar ${getBarColor(mediaEvasao/100)}" 
+                    <div class="progress-bar ${getBarColor(mediaEvasao / 100)}" 
      style="width: ${mediaEvasao.toFixed(1)}%; min-width: 60px;">
     ${mediaEvasao.toFixed(1).replace('.', ',')}%
 </div>
