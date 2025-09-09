@@ -1,7 +1,7 @@
-package com.EngenhariaSoftware.ModelagemBanco.controller;
+package ES.EquipeRocket.SistemaCI.controller;
 
-import com.EngenhariaSoftware.ModelagemBanco.model.Coordenador;
-import com.EngenhariaSoftware.ModelagemBanco.service.LoginService;
+import ES.EquipeRocket.SistemaCI.model.Coordenador;
+import ES.EquipeRocket.SistemaCI.service.LoginService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,9 +15,9 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String loginForm() {
-        return "login"; // JSP ou Thymeleaf
+        return "index"; // JSP ou Thymeleaf
     }
 
     @PostMapping("/login")
@@ -29,12 +29,12 @@ public class LoginController {
             session.setAttribute("coordenadorLogado", coord); // guarda na sessão
             return "redirect:/home";
         }
-        return "redirect:/login?erro=true";
+        return "redirect:/?erro=true";
     }
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
-        return "redirect:/login";
+        return "redirect:/";
     }
 }

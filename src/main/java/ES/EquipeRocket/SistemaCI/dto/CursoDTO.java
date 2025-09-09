@@ -1,6 +1,6 @@
-package com.EngenhariaSoftware.ModelagemBanco.dto;
+package ES.EquipeRocket.SistemaCI.dto;
 
-import com.EngenhariaSoftware.ModelagemBanco.model.Curso;
+import ES.EquipeRocket.SistemaCI.model.Curso;
 
 public class CursoDTO {
     private Long codigo;

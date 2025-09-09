@@ -1,8 +1,8 @@
-package com.EngenhariaSoftware.ModelagemBanco.service;
+package ES.EquipeRocket.SistemaCI.service;
 
-import com.EngenhariaSoftware.ModelagemBanco.dto.AlunoDTO;
-import com.EngenhariaSoftware.ModelagemBanco.model.Aluno;
-import com.EngenhariaSoftware.ModelagemBanco.repository.AlunoRepository;
+import ES.EquipeRocket.SistemaCI.dto.AlunoDTO;
+import ES.EquipeRocket.SistemaCI.model.Aluno;
+import ES.EquipeRocket.SistemaCI.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +12,13 @@ import java.util.stream.Collectors;
 
 @Service
 public class AlunoService {
-    
+
     @Autowired
     private AlunoRepository alunoRepository;
-    
+
     public List<AlunoDTO> listarAlunosDTO() {
         List<Aluno> alunos = alunoRepository.findAll();
-        
+
         return alunos.stream().map(aluno -> {
             String nomeCurso = "";
             Double evasao = 0.0;
@@ -34,7 +34,7 @@ public class AlunoService {
                 }
                 historicoEvasao = matricula.getHistoricoEvasaoMap(); // pega o histórico
             }
-            
+
             return new AlunoDTO(
                     aluno.getNome(),
                     aluno.getMatricula(),
