@@ -26,7 +26,8 @@ function renderTabela(lista) {
         const row = document.createElement("tr");
         row.style.cursor = "pointer";
         row.addEventListener("click", () => {
-            window.location.href = `alunos_curso.html?codigo=${encodeURIComponent(curso.codigo)}`;
+            window.location.href = `/alunos/curso/${encodeURIComponent(curso.codigo)}`;
+            // antes era window.location.href = `alunos_curso.html?codigo=${encodeURIComponent(curso.codigo)}`;
         });
         row.innerHTML = `
             <td>${curso.codigo}</td>
