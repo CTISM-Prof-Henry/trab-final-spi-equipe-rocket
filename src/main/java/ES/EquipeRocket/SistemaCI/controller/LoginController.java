@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
-    
+
     @Autowired
     private LoginService loginService;
-    
+
     @GetMapping("/")
     public String loginForm() {
         return "index"; // JSP ou Thymeleaf
     }
-    
+
     @PostMapping("/login")
     public String loginSubmit(@RequestParam String email,
                               @RequestParam String senha,
@@ -31,7 +31,7 @@ public class LoginController {
         }
         return "redirect:/?erro=true";
     }
-    
+
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();

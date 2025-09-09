@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Entity
 public class Matricula {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
@@ -21,7 +21,7 @@ public class Matricula {
     @ManyToOne
     @JoinColumn(name = "aluno_id")
     private Aluno aluno;
-    
+
     @ManyToOne
     @JoinColumn(name = "curso_id")
     private Curso curso;
@@ -31,18 +31,19 @@ public class Matricula {
 
     private static final ObjectMapper mapper = new ObjectMapper();
 
-    public Matricula() {}
+    public Matricula() {
+    }
 
     public Matricula(Map<String, Double> historicoEvasaoMap, Aluno aluno, Curso curso) {
         this.setHistoricoEvasaoMap(historicoEvasaoMap);
         this.aluno = aluno;
         this.curso = curso;
     }
-    
+
     public Long getCodigo() {
         return codigo;
     }
-    
+
     public void setCodigo(Long codigo) {
         this.codigo = codigo;
     }
@@ -51,7 +52,7 @@ public class Matricula {
     public String getHistoricoEvasao() {
         return historicoEvasao;
     }
-    
+
     public void setHistoricoEvasao(String historicoEvasao) {
         this.historicoEvasao = historicoEvasao;
         // Atualiza o Map sempre que a String JSON mudar
@@ -72,15 +73,15 @@ public class Matricula {
         // Atualiza a string JSON sempre que o Map mudar
         this.historicoEvasao = toJson(historicoEvasaoMap);
     }
-    
+
     public Aluno getAluno() {
         return aluno;
     }
-    
+
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
     }
-    
+
     public Curso getCurso() {
         return curso;
     }
@@ -92,7 +93,8 @@ public class Matricula {
     // Converte String JSON para Map
     private Map<String, Double> fromJson(String json) {
         try {
-            return mapper.readValue(json, new TypeReference<Map<String, Double>>() {});
+            return mapper.readValue(json, new TypeReference<Map<String, Double>>() {
+            });
         } catch (IOException e) {
             e.printStackTrace();
             return null;

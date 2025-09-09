@@ -12,7 +12,7 @@ import java.util.List;
 
 @Controller
 public class AlunoController {
-    
+
     @Autowired
     private AlunoService alunoService;
 
@@ -39,5 +39,4 @@ public class AlunoController {
         model.addAttribute("aluno", alunoDTO);
         return "aluno"; // Thymeleaf vai renderizar aluno.html
     }
-
 }
