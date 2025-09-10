@@ -33,6 +33,6 @@ docker-compose up -d --build
 ## Contato
 
 O repositório foi originalmente desenvolvido por: 
-Rayka [(https://github.com/Rayka-Hyushi)]
-João [(https://github.com/JoaoAlisson1)]
-& Liche [(https://github.com/Liche008)]
+<br>Rayka [(https://github.com/Rayka-Hyushi)]
+<br>João [(https://github.com/JoaoAlisson1)]
+<br>& Liche [(https://github.com/Liche008)]
