@@ -2,8 +2,8 @@
 
 # Sistema de Coordenação Institucional
 
-Este sistema foi projetado para permitir que coordenadores de cursos visualizem o(s) cursos
-administrados por eles, além de receber um relatório de probabilidade de evasão do alunos.
+Este sistema foi projetado para permitir que coordenadores de cursos visualizem o curso
+administrado por eles, além de receber um relatório de probabilidade de evasão dos alunos.
 
 ## Sumário
 
