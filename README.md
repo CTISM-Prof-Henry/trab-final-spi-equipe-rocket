@@ -9,9 +9,7 @@ administrados por eles, além de receber um relatório de probabilidade de evas�
 
 * [Pré-requisitos](#pré-requisitos)
 * [Instalação](#instalação)
-* [Instruções de uso](#instruções-de-uso)
 * [Contato](#contato)
-* [Bibliografia](#bibliografia)
 
 ## Pré-requisitos
 
@@ -26,27 +24,15 @@ Para utilizar esse sistema web, é recomendado cumprir os seguintes requisitos:
 
 ## Instalação
 
-Descreva aqui as instruções para instalação das ferramentas para execução do código-fonte:
+Para rodar a aplicação em um container docker, basta clonar o repositório do github, abrir um terminal dentro da pasta clonada e executar o seguinte comando:
 
 ```bash
-sudo apt-get install nano
-```
-
-## Instruções de Uso
-
-Descreva aqui o passo-a-passo que outros usuários precisam realizar para conseguir executar com sucesso o código-fonte
-deste projeto:
-
-```bash
-echo "olá mundo!"
+docker-compose up -d --build
 ```
 
 ## Contato
 
-O repositório foi originalmente desenvolvido por Fulano: [fulano@ufsm.br]()
-
-## Bibliografia
-
-Adicione aqui entradas numa lista com a documentação pertinente:
-
-* [Documentação coplin-db2](https://pypi.org/project/coplin-db2/)
+O repositório foi originalmente desenvolvido por: 
+Rayka [(https://github.com/Rayka-Hyushi)]
+João [(https://github.com/JoaoAlisson1)]
+& Liche [(https://github.com/Liche008)]
