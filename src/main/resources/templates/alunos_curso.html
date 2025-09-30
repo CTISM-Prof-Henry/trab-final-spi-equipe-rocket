@@ -48,9 +48,9 @@
                 <table class="table table-bordered table-hover bg-white">
                     <thead class="thead-light">
                     <tr>
-                        <th>Nome</th>
-                        <th>Matrícula</th>
-                        <th>Probabilidade de Evasão</th>
+                        <th onclick="setFiltro('nome', !ordemCrescente)">Nome <span id="filtro-nome"></span></th>
+                        <th onclick="setFiltro('matricula', !ordemCrescente)">Matrícula <span id="filtro-matricula"></span></th>
+                        <th onclick="setFiltro('evasao', !ordemCrescente)">Probabilidade de Evasão <span id="filtro-evasao"></span></th>
                     </tr>
                     </thead>
                     <tbody id="tabela-alunos">

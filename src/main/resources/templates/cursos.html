@@ -49,11 +49,9 @@
                 <table class="table table-bordered table-hover bg-white">
                     <thead class="thead-light">
                     <tr>
-                        <th onclick="setFiltro('codigo', !ordemCrescente)">Código</th>
-                        <th onclick="setFiltro('nome', !ordemCrescente)">Nome</th>
-                        <th onclick="setFiltro('evasaoMedia', !ordemCrescente)">
-                            Evasão Média <span id="texto-filtro"></span>
-                        </th>
+                        <th onclick="setFiltro('codigo', !ordemCrescente)">Código <span id="filtro-codigo"></span></th>
+                        <th onclick="setFiltro('nome', !ordemCrescente)">Nome <span id="filtro-nome"></span></th>
+                        <th onclick="setFiltro('evasaoMedia', !ordemCrescente)">Evasão Média <span id="filtro-evasao"></span></th>
                     </tr>
                     </thead>
                     <tbody id="tabela-cursos">
