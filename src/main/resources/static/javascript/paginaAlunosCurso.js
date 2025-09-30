@@ -103,13 +103,27 @@ function ordenarTabela() {
 function setFiltro(filtro, crescente) {
     filtroAtual = filtro;
     ordemCrescente = crescente;
-    const nomesFiltro = {
-        nome: "Nome",
-        matricula: "Matrícula",
-        evasao: "Evasão"
-    };
     const ordem = ordemCrescente ? "↑" : "↓";
-    document.getElementById('texto-filtro').textContent = `${nomesFiltro[filtro]} ${ordem}`;
+    switch (filtro) {
+        case "nome": {
+            document.getElementById('filtro-nome').textContent = `${ordem}`;
+            document.getElementById('filtro-matricula').textContent = null;
+            document.getElementById('filtro-evasao').textContent = null;
+            break;
+        }
+        case "matricula": {
+            document.getElementById('filtro-nome').textContent = null;
+            document.getElementById('filtro-matricula').textContent = `${ordem}`;
+            document.getElementById('filtro-evasao').textContent = null;
+            break;
+        }
+        case "evasao": {
+            document.getElementById('filtro-nome').textContent = null;
+            document.getElementById('filtro-matricula').textContent = null;
+            document.getElementById('filtro-evasao').textContent = `${ordem}`;
+            break;
+        }
+    }
     ordenarTabela();
 }
 

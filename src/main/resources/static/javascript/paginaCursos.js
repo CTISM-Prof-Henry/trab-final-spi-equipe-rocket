@@ -76,7 +76,26 @@ function setFiltro(filtro, crescente) {
     filtroAtual = filtro;
     ordemCrescente = crescente;
     const ordem = ordemCrescente ? "↑" : "↓";
-    document.getElementById('texto-filtro').textContent = `${nomesFiltro[filtro]} ${ordem}`;
+    switch (filtro) {
+        case "codigo": {
+            document.getElementById('filtro-codigo').textContent = `${ordem}`;
+            document.getElementById('filtro-nome').textContent = null;
+            document.getElementById('filtro-evasao').textContent = null;
+            break;
+        }
+        case "nome": {
+            document.getElementById('filtro-codigo').textContent = null;
+            document.getElementById('filtro-nome').textContent = `${ordem}`;
+            document.getElementById('filtro-evasao').textContent = null;
+            break;
+        }
+        case "evasaoMedia": {
+            document.getElementById('filtro-codigo').textContent = null;
+            document.getElementById('filtro-nome').textContent = null;
+            document.getElementById('filtro-evasao').textContent = `${ordem}`;
+            break;
+        }
+    }
     ordenarTabela();
 }
 

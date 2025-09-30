@@ -52,12 +52,10 @@
                 <table class="table table-bordered table-hover bg-white">
                     <thead class="thead-light">
                     <tr>
-                        <th onclick="setFiltro('nome', !ordemCrescente)">Nome</th>
-                        <th onclick="setFiltro('curso', !ordemCrescente)">Curso</th>
-                        <th onclick="setFiltro('matricula', !ordemCrescente)">Matrícula</th>
-                        <th onclick="setFiltro('evasao', !ordemCrescente)">
-                            Evasão <span id="texto-filtro"></span>
-                        </th>
+                        <th onclick="setFiltro('nome', !ordemCrescente)">Nome <span id="filtro-nome"></span></th>
+                        <th onclick="setFiltro('curso', !ordemCrescente)">Curso <span id="filtro-curso"></span></th>
+                        <th onclick="setFiltro('matricula', !ordemCrescente)">Matrícula <span id="filtro-matricula"></span></th>
+                        <th onclick="setFiltro('evasao', !ordemCrescente)">Evasão <span id="filtro-evasao"></span></th>
                     </tr>
                     </thead>
                     <tbody id="tabela-alunos">
