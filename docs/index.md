@@ -1,11 +1,13 @@
-# Welcome to MkDocs
+# Bem-vindo a Documentação do SCI
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Este site é dedicado a documentação do Sistema de coordenação institucional.
 
-## Commands
+## Requisitos
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
+Para utilizar esse sistema, você precisa das seguintes tecnologias:
+
+* `Docker` - Para rodar o sistema em containers.
+* `` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
 
