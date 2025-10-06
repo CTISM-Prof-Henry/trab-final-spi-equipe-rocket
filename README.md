@@ -17,7 +17,7 @@ administrados por eles, além de receber um relatório de probabilidade de evas�
 
 Para utilizar esse sistema web, é recomendado cumprir os seguintes requisitos:
 
-| Configuração      | Valor                                                                             |
+| Requisito         | Descrição                                                                         |
 |-------------------|-----------------------------------------------------------------------------------|
 | Navegador         | Versões mais recentes do Google Chrome, Mozilla Firefox, Microsoft Edge ou Safari |
 | Javascript        | Normalmente suportado pelos navegadores                                           |
