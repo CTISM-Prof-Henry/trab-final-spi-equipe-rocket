@@ -2,37 +2,19 @@
 
 # Sistema de Coordenação Institucional
 
-Este sistema foi projetado para permitir que coordenadores de cursos visualizem o curso
-administrado por eles, além de receber um relatório de probabilidade de evasão dos alunos.
+Este sistema foi projetado para permitir que coordenadores de cursos visualizem o(s) curso(s)
+administrados por eles, além de receber um relatório de probabilidade de evasão de cada aluno.
 
-## Sumário
+Para utilizar esse sistema é necessário que você cumpra alguns requisitos na sua máquina.
 
-* [Pré-requisitos](#pré-requisitos)
-* [Instalação](#instalação)
-* [Contato](#contato)
+Para saber como utilizar esse sistema, confira a documentação completa disponível em: https://ctism-prof-henry.github.io/trab-final-spi-equipe-rocket
 
-## Pré-requisitos
+## Créditos
 
-Para utilizar esse sistema web, é recomendado cumprir os seguintes requisitos:
+O repositório foi originalmente desenvolvido por:
 
-| Configuração      | Valor                                                                             |
-|-------------------|-----------------------------------------------------------------------------------|
-| Navegador         | Versões mais recentes do Google Chrome, Mozilla Firefox, Microsoft Edge ou Safari |
-| Javascript        | Normalmente suportado pelos navegadores                                           |
-| Resolução de tela | no minímo 1024x768                                                                |
-| Rede              | Necessário acesso a internet                                                      |
-
-## Instalação
-
-Para rodar a aplicação em um container docker, basta clonar o repositório do github, abrir um terminal dentro da pasta clonada e executar o seguinte comando:
-
-```bash
-docker-compose up -d --build
-```
-
-## Contato
-
-O repositório foi originalmente desenvolvido por: 
-<br>Rayka [(https://github.com/Rayka-Hyushi)]
-<br>João [(https://github.com/JoaoAlisson1)]
-<br>& Liche [(https://github.com/Liche008)]
+* [**Rayka Hyushi (Sidnei)**](https://github.com/Rayka-Hyushi), desenvolvedor do projeto inicial do banco de dados e da documentação, responsável pelo refinamento e 
+organização do repositório e do projeto kanban da equipe, além de responsável pela manutenção dos códigos.
+* [**João Alisson (João)**](https://github.com/JoaoAlisson1), desenvolvedor do projeto inicial de classes e da modelagem com spring do projeto, 
+programador da estrutura básica do projeto, incluindo backend e frontend.
+* [**Liche (Gabriel)**](https://github.com/Liche008), desenvolvedor do sistema de login e segurança do projeto.
