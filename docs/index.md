@@ -5,13 +5,13 @@ administrados por eles, além de receber um relatório de probabilidade de evas�
 
 ## Sumário
 
-* [Pré-requisitos](#Pré-requisitos)
-* [Instalação](#instalação)
-* [Instruções de uso](#instruções-de-uso)
-* [Estrutura do Projeto](#Estrutura-do-Projeto)
-* [Créditos](#Créditos)
+* [Requisitos](#requisitos)
+* [Instalação](#instalacao)
+* [Instruções de uso](#instrucoes-de-uso)
+* [Estrutura do Projeto](#estrutura-do-projeto)
+* [Créditos](#creditos)
 
-## Pré-requisitos
+## Requisitos
 
 Para utilizar esse sistema web, é recomendado cumprir os seguintes requisitos:
 
@@ -65,6 +65,7 @@ Para a aplicação, seguimos a seguinte estrutura de classes, representada pelo 
 ## Créditos
 
 O repositório foi originalmente desenvolvido por:
+
 * [**Rayka Hyushi (Sidnei)**](https://github.com/Rayka-Hyushi)
 * [**João Alisson (João)**](https://github.com/JoaoAlisson1)
 * [**Liche (Gabriel)**](https://github.com/Liche008)
