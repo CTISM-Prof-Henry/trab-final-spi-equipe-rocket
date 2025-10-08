@@ -40,7 +40,8 @@ public class AlunoService {
                     aluno.getMatricula(),
                     evasao,
                     nomeCurso,
-                    historicoEvasao
+                    historicoEvasao,
+                    aluno.getFoto()
             );
         }).collect(Collectors.toList());
     }
@@ -75,7 +76,8 @@ public class AlunoService {
                     aluno.getMatricula(),
                     evasao,
                     nomeCurso,
-                    historicoEvasao
+                    historicoEvasao,
+                    aluno.getFoto()
             );
         }).collect(Collectors.toList());
     }

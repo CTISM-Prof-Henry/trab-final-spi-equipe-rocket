@@ -8,16 +8,18 @@ public class AlunoDTO {
     private Double evasao;
     private String nomeCurso;
     private Map<String, Double> historicoEvasao;  // novo campo
+    private String foto; // outro novo campo hehe
 
     public AlunoDTO() {
     }
 
-    public AlunoDTO(String nome, Long matricula, Double evasao, String nomeCurso, Map<String, Double> historicoEvasao) {
+    public AlunoDTO(String nome, Long matricula, Double evasao, String nomeCurso, Map<String, Double> historicoEvasao, String foto) {
         this.nome = nome;
         this.matricula = matricula;
         this.evasao = evasao;
         this.nomeCurso = nomeCurso;
         this.historicoEvasao = historicoEvasao;
+        this.foto = foto;
     }
 
     // Getters e Setters
@@ -59,5 +61,11 @@ public class AlunoDTO {
 
     public void setHistoricoEvasao(Map<String, Double> historicoEvasao) {
         this.historicoEvasao = historicoEvasao;
+    }
+    public String getFoto() {
+        return foto;
+    }
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

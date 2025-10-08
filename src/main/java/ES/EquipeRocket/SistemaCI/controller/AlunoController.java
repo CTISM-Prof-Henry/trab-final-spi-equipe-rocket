@@ -16,15 +16,13 @@ public class AlunoController {
     @Autowired
     private AlunoService alunoService;
 
-    // Lista todos os alunos
     @GetMapping("/alunos")
     public String listarAlunos(Model model) {
         List<AlunoDTO> alunos = alunoService.listarAlunosDTO();
         model.addAttribute("alunos", alunos);
-        return "alunos"; // nome do template Thymeleaf alunos.html
+        return "alunos";
     }
 
-    // Lista alunos por curso (aceita plural e singular)
     @GetMapping({"/alunos/curso/{idCurso}", "/aluno/curso/{idCurso}"})
     public String listarAlunosPorCurso(@PathVariable Long idCurso, Model model) {
         List<AlunoDTO> alunos = alunoService.listarAlunosPorCursoDTO(idCurso);
