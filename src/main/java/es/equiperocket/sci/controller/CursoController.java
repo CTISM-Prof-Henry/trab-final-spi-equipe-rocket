@@ -1,7 +1,7 @@
-package ES.EquipeRocket.SistemaCI.controller;
+package es.equiperocket.sci.controller;
 
-import ES.EquipeRocket.SistemaCI.dto.CursoDTO;
-import ES.EquipeRocket.SistemaCI.service.CursoService;
+import es.equiperocket.sci.dto.CursoDTO;
+import es.equiperocket.sci.service.CursoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

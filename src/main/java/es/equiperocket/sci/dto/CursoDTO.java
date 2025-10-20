@@ -1,6 +1,6 @@
-package ES.EquipeRocket.SistemaCI.dto;
+package es.equiperocket.sci.dto;
 
-import ES.EquipeRocket.SistemaCI.model.Curso;
+import es.equiperocket.sci.model.Curso;
 
 public class CursoDTO {
     private Long codigo;

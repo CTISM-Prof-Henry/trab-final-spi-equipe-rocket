@@ -1,7 +1,7 @@
-package ES.EquipeRocket.SistemaCI.controller;
+package es.equiperocket.sci.controller;
 
-import ES.EquipeRocket.SistemaCI.model.Coordenador;
-import ES.EquipeRocket.SistemaCI.service.LoginService;
+import es.equiperocket.sci.model.Coordenador;
+import es.equiperocket.sci.service.LoginService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

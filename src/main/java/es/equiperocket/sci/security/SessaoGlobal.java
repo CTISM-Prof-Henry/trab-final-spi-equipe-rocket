@@ -1,6 +1,6 @@
-package ES.EquipeRocket.SistemaCI.security;
+package es.equiperocket.sci.security;
 
-import ES.EquipeRocket.SistemaCI.model.Coordenador;
+import es.equiperocket.sci.model.Coordenador;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;

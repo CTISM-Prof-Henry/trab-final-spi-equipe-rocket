@@ -1,7 +1,7 @@
-package ES.EquipeRocket.SistemaCI.controller;
+package es.equiperocket.sci.controller;
 
-import ES.EquipeRocket.SistemaCI.dto.AlunoDTO;
-import ES.EquipeRocket.SistemaCI.service.AlunoService;
+import es.equiperocket.sci.dto.AlunoDTO;
+import es.equiperocket.sci.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,9 +1,16 @@
-package ES.EquipeRocket.SistemaCI.model;
+package es.equiperocket.sci.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Transient;
+import jakarta.persistence.GenerationType;
 
 import java.io.IOException;
 import java.util.Map;
@@ -16,7 +23,7 @@ public class Matricula {
     private Long codigo;
 
     @Column(columnDefinition = "jsonb") // Só para registro, depende do seu setup
-    private String historicoEvasao;  // JSON armazenado como String
+    private String historico_evasao;  // JSON armazenado como String
 
     @ManyToOne
     @JoinColumn(name = "aluno_id")
@@ -27,15 +34,15 @@ public class Matricula {
     private Curso curso;
 
     @Transient // Este campo não é persistido no banco
-    private Map<String, Double> historicoEvasaoMap;
+    private Map<String, Double> hist_evasao_map;
 
     private static final ObjectMapper mapper = new ObjectMapper();
 
     public Matricula() {
     }
 
-    public Matricula(Map<String, Double> historicoEvasaoMap, Aluno aluno, Curso curso) {
-        this.setHistoricoEvasaoMap(historicoEvasaoMap);
+    public Matricula(Map<String, Double> hist_evasao_map, Aluno aluno, Curso curso) {
+        this.setHistEvasaoMap(hist_evasao_map);
         this.aluno = aluno;
         this.curso = curso;
     }
@@ -50,28 +57,28 @@ public class Matricula {
 
     // Getter e setter para a String JSON bruta (armazenamento no banco)
     public String getHistoricoEvasao() {
-        return historicoEvasao;
+        return historico_evasao;
     }
 
-    public void setHistoricoEvasao(String historicoEvasao) {
-        this.historicoEvasao = historicoEvasao;
+    public void setHistoricoEvasao(String historico_evasao) {
+        this.historico_evasao = historico_evasao;
         // Atualiza o Map sempre que a String JSON mudar
-        this.historicoEvasaoMap = fromJson(historicoEvasao);
+        this.hist_evasao_map = fromJson(historico_evasao);
     }
 
     // Getter e setter para o Map (usado no código)
-    public Map<String, Double> getHistoricoEvasaoMap() {
+    public Map<String, Double> getHistEvasaoMap() {
         // Se ainda não foi carregado, converte a string para Map
-        if (historicoEvasaoMap == null && historicoEvasao != null) {
-            historicoEvasaoMap = fromJson(historicoEvasao);
+        if (hist_evasao_map == null && historico_evasao != null) {
+            hist_evasao_map = fromJson(historico_evasao);
         }
-        return historicoEvasaoMap;
+        return hist_evasao_map;
     }
 
-    public void setHistoricoEvasaoMap(Map<String, Double> historicoEvasaoMap) {
-        this.historicoEvasaoMap = historicoEvasaoMap;
+    public void setHistEvasaoMap(Map<String, Double> hist_evasao_map) {
+        this.hist_evasao_map = hist_evasao_map;
         // Atualiza a string JSON sempre que o Map mudar
-        this.historicoEvasao = toJson(historicoEvasaoMap);
+        this.historico_evasao = toJson(hist_evasao_map);
     }
 
     public Aluno getAluno() {

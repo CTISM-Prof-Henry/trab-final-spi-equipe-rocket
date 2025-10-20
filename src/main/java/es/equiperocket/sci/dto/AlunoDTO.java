@@ -1,4 +1,4 @@
-package ES.EquipeRocket.SistemaCI.dto;
+package es.equiperocket.sci.dto;
 
 import java.util.Map;
 
@@ -62,9 +62,11 @@ public class AlunoDTO {
     public void setHistoricoEvasao(Map<String, Double> historicoEvasao) {
         this.historicoEvasao = historicoEvasao;
     }
+
     public String getFoto() {
         return foto;
     }
+
     public void setFoto(String foto) {
         this.foto = foto;
     }

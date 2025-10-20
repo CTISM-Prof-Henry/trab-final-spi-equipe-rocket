@@ -1,6 +1,11 @@
-package ES.EquipeRocket.SistemaCI.model;
+package es.equiperocket.sci.model;
 
-import jakarta.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.GenerationType;
 
 import java.util.List;
 

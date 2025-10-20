@@ -1,7 +1,7 @@
-package ES.EquipeRocket.SistemaCI.service;
+package es.equiperocket.sci.service;
 
-import ES.EquipeRocket.SistemaCI.model.Curso;
-import ES.EquipeRocket.SistemaCI.repository.CursoRepository;
+import es.equiperocket.sci.model.Curso;
+import es.equiperocket.sci.repository.CursoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

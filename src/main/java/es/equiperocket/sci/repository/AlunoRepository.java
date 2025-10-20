@@ -1,6 +1,6 @@
-package ES.EquipeRocket.SistemaCI.repository;
+package es.equiperocket.sci.repository;
 
-import ES.EquipeRocket.SistemaCI.model.Aluno;
+import es.equiperocket.sci.model.Aluno;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

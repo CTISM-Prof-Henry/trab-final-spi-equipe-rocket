@@ -1,7 +1,7 @@
-package ES.EquipeRocket.SistemaCI.service;
+package es.equiperocket.sci.service;
 
-import ES.EquipeRocket.SistemaCI.model.Coordenador;
-import ES.EquipeRocket.SistemaCI.repository.CoordenadorRepository;
+import es.equiperocket.sci.model.Coordenador;
+import es.equiperocket.sci.repository.CoordenadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
