@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Documentação do Sistema de Coordenação Institucional</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Documentação do Sistema de Coordenação Institucional</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#sistema-de-coordenacao-institucional" class="nav-link">Sistema de Coordenação Institucional</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#sumario" class="nav-link">Sumário</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requisitos" class="nav-link">Requisitos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#instalacao" class="nav-link">Instalação</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#instrucoes-de-uso" class="nav-link">Instruções de Uso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#estrutura-do-projeto" class="nav-link">Estrutura do Projeto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creditos" class="nav-link">Créditos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="sistema-de-coordenacao-institucional">Sistema de Coordenação Institucional</h1>
+<p>Este sistema foi projetado para permitir que coordenadores de cursos visualizem o(s) cursos
+administrados por eles, além de receber um relatório de probabilidade de evasão do alunos.</p>
+<h2 id="sumario">Sumário</h2>
+<ul>
+<li><a href="#requisitos">Requisitos</a></li>
+<li><a href="#instalacao">Instalação</a></li>
+<li><a href="#instrucoes-de-uso">Instruções de uso</a></li>
+<li><a href="#estrutura-do-projeto">Estrutura do Projeto</a></li>
+<li><a href="#creditos">Créditos</a></li>
+</ul>
+<h2 id="requisitos">Requisitos</h2>
+<p>Para utilizar esse sistema web, é recomendado cumprir os seguintes requisitos:</p>
+<table>
+<thead>
+<tr>
+<th>Requisito</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker</td>
+<td>Docker desktop instalado e configurado na máquina.</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>Java Development Kit (JDK), preferêncialmente na versão 21.</td>
+</tr>
+<tr>
+<td>Rede</td>
+<td>Necessário acesso a internet para baixar os arquivos do repositório.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="instalacao">Instalação</h2>
+<p>Para rodar a aplicação em um container docker, basta clonar o repositório do github, abrir um terminal dentro da pasta
+clonada e executar o seguinte comando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</span></code></pre></div>
+<p>Ao fazer isso, a aplicação será configurada e estará rodando em um container no docker, juntamente ao banco de dados.
+Por padrão, a porta utilizada é 8080 para a aplicação e 5433 para o banco de dados. As portas podem ser alteradas 
+modificando os arquivos application.properties, Dockerfile e docker-compose.yml.</p>
+<h2 id="instrucoes-de-uso">Instruções de Uso</h2>
+<p>Ao iniciar o SCI, a primeira tela que você verá ao acessar o site será a tela de login. É necessário realizar o login antes
+de utilizar o site. Para isso existem alguns usuários padrão para testes, como o e-mail "admin@admin.com", senha "admin".
+Outros usuários padrão podem ser encontrados no arquivo <a href="../src/main/resources/data.sql"><strong>data.sql</strong></a>.</p>
+<p>Na página inicial após o login, você verá as opções Cursos e Alunos, além da opção de Sair próximo a foto de perfil.</p>
+<p>Na página Cursos, o usuário Coordenador pode visualizar o(s) curso(s) que ele ministra. O usuário também pode pesquisar 
+pelo nome ou código do curso que deseja visualizar, além de poder filtrar a ordem, clicando nos nomes do cabeçalho da tabela.
+Clicando em um curso da tabela, o coordenador visualiza os alunos daquele curso também podendo filtrar e pesquisar.</p>
+<p>Na página Alunos, o coordenador visualiza todos os alunos de todos os cursos ministrados. Também podendo pesquisar e filtrar
+da forma que desejar.</p>
+<p>Ao clicar em um aluno da tabela, o coordenador pode visualizar o perfil daquele aluno, visualizando nome, matrícula, curso, 
+a foto do aluno, além do histórico de evasão nos anos escolares do aluno.</p>
+<h2 id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<p>Utilizamos o modelo ER para o banco de dados da aplicação, o qual está representado na imagem a seguir:</p>
+<p><img alt="Texto Alternativo" src="img/Modelo%20ER.png" /></p>
+<p>Para a aplicação, seguimos a seguinte estrutura de classes, representada pelo diagrama UML abaixo:</p>
+<p><img alt="Texto Alternativo" src="img/Diagrama%20UML.png" /></p>
+<h2 id="creditos">Créditos</h2>
+<p>O repositório foi originalmente desenvolvido por:</p>
+<ul>
+<li><a href="https://github.com/Rayka-Hyushi"><strong>Rayka Hyushi (Sidnei)</strong></a>, desenvolvedor do projeto inicial do banco de dados e da documentação, responsável pelo refinamento e
+  organização do repositório e do projeto kanban da equipe, além de responsável pela manutenção dos códigos.</li>
+<li><a href="https://github.com/JoaoAlisson1"><strong>João Alisson (João)</strong></a>, desenvolvedor do projeto inicial de classes e da modelagem com spring do projeto,
+  programador da estrutura básica do projeto, incluindo backend e frontend.</li>
+<li><a href="https://github.com/Liche008"><strong>Liche (Gabriel)</strong></a>, desenvolvedor do sistema de login e segurança do projeto.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-10-06 16:15:21.078076+00:00
+-->

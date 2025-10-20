@@ -24,9 +24,11 @@
                 </div>
 
                 <div class="ml-auto d-flex align-items-center user-area">
-                    <img th:src="@{/images/perfil.jpg}" alt="Usuário" class="rounded-circle user-img">
+                    <i  mg th:src="@{/images/{foto}(foto=${coordenador.foto})}"
+                         alt="Usuário" class="rounded-circle user-img">
+                    </i>
                     <div class="ml-2 text-right">
-                        <span class="d-block user-name">Vinicius</span>
+                        <span class="d-block user-name" th:text="${coordenador.nome}">Usuário</span>
                         <a th:href="@{/logout}" class="small text-primary">Sair</a>
                     </div>
                 </div>
@@ -52,12 +54,10 @@
                 <table class="table table-bordered table-hover bg-white">
                     <thead class="thead-light">
                     <tr>
-                        <th onclick="setFiltro('nome', !ordemCrescente)">Nome</th>
-                        <th onclick="setFiltro('curso', !ordemCrescente)">Curso</th>
-                        <th onclick="setFiltro('matricula', !ordemCrescente)">Matrícula</th>
-                        <th onclick="setFiltro('evasao', !ordemCrescente)">
-                            Evasão <span id="texto-filtro"></span>
-                        </th>
+                        <th onclick="setFiltro('nome', !ordemCrescente)">Nome <span id="filtro-nome"></span></th>
+                        <th onclick="setFiltro('curso', !ordemCrescente)">Curso <span id="filtro-curso"></span></th>
+                        <th onclick="setFiltro('matricula', !ordemCrescente)">Matrícula <span id="filtro-matricula"></span></th>
+                        <th onclick="setFiltro('evasao', !ordemCrescente)">Evasão <span id="filtro-evasao"></span></th>
                     </tr>
                     </thead>
                     <tbody id="tabela-alunos">
