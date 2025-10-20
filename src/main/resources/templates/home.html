@@ -32,9 +32,10 @@
 
                 <!-- Parte do usuário à direita -->
                 <div class="ml-auto d-flex align-items-center user-area">
-                    <img th:src="@{/images/perfil.jpg}" alt="Usuário" class="rounded-circle user-img">
+                    <img th:src="@{/images/{foto}(foto=${coordenador.foto})}"
+                         alt="Usuário" class="rounded-circle user-img">
                     <div class="ml-2 text-right">
-                        <span class="d-block user-name">Vinicius</span>
+                        <span class="d-block user-name" th:text="${coordenador.nome}">Usuário</span> <!--test-->
                         <a th:href="@{/logout}" class="small text-primary">Sair</a>
                     </div>
                 </div>

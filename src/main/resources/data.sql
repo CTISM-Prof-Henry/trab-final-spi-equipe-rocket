@@ -1,16 +1,16 @@
 -- Alunos (IDs gerados automaticamente)
 INSERT INTO aluno (nome, email, foto) VALUES
-                                          ('Maria Silva', 'maria@email.com', 'maria.png'),
-                                          ('João Pereira', 'joao.pereira@gmail.com', 'joao.png'),
-                                          ('Ana Costa', 'ana.costa@gmail.com', 'ana.png'),
-                                          ('Carlos Eduardo', 'carlos.eduardo@gmail.com', 'carlos.png'),
-                                          ('Fernanda Lima', 'fernanda.lima@gmail.com', 'fernanda.png');
+                                          ('Maria Silva', 'maria@email.com', 'maria.jpg'),
+                                          ('João Pereira', 'joao.pereira@gmail.com', 'joao.jpg'),
+                                          ('Ana Costa', 'ana.costa@gmail.com', 'ana.jpg'),
+                                          ('Carlos Eduardo', 'carlos.eduardo@gmail.com', 'carlos.jpg'),
+                                          ('Fernanda Lima', 'fernanda.lima@gmail.com', 'fernanda.jpg');
 
 -- Coordenadores (IDs gerados automaticamente)
 INSERT INTO coordenador (nome, email, senha, foto) VALUES
                                                        ('Admin', 'admin@admin.com', 'admin', 'adm.jpg'),
                                                        ('Leonardo Andrade', 'leonardo@gmail.com', '1234', 'leonardo.jpg'),
-                                                       ('Mariana Silva', 'mariana.silva@gmail.com', 'senha123', 'mariana.png');
+                                                       ('Mariana Silva', 'mariana.silva@gmail.com', 'senha123', 'mariana.jpg');
 
 -- Cursos (IDs gerados automaticamente, referência ao coordenador via subquery)
 INSERT INTO curso (nome, evasao_media, coordenador_id) VALUES
